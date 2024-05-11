@@ -9,7 +9,6 @@ def kt(n):
                 return False
     return True
 
-A.append([str(k) for k in str(n)])
 d = 0
 s = 0
 d = str(n)[::-1]
