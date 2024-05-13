@@ -13,3 +13,9 @@ def max_gcd(n):
             t = max(t, gcd(a, b))
     return t
 
+def uoc_so(n):
+    B = []
+    for i in range(1,n+1):
+        if n%i == 0:
+            B.append(i)
+    return B
