@@ -19,3 +19,20 @@ def uoc_so(n):
         if n%i == 0:
             B.append(i)
     return B
+
+def prime(n):
+    if n <= 1:
+        return False
+    else:
+        for i in range(2,n):
+            if n%i == 0:
+                return False
+    return True
+
+def sprime(n):
+    while n > 0:
+        if prime(n) == False:
+            return False
+        else:
+            n//=10
+    return True
