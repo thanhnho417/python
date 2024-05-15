@@ -36,3 +36,18 @@ def sprime(n):
         else:
             n//=10
     return True
+
+def chiahetcuatong(a,b,k):
+    n = a+b
+    if n%k != 0:
+        return False
+    return True
+
+def giaithua(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        t = 1
+        for i in range(2, n + 1):
+            t *= i
+        return t
