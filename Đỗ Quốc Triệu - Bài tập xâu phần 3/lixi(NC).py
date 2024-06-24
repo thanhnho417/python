@@ -1,5 +1,12 @@
-n = input()
+n = input().strip()
 k = int(input())
-t = "".join(sorted(n,reverse=True))
-kq = t[:k+1]
-print(kq)
+A = []
+for i in n:
+    while k > 0 and A and A[-1] < k:
+        A.pop()
+        k -= 1
+    A.append(i)
+while k > 0:
+    A.pop()
+    k -= 1
+print("".join(A))
