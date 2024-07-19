@@ -1,0 +1,17 @@
+def fibo(n):
+    f0 = 0
+    f1 = 1
+    f = [0,1]
+    while f0 + f1 <= n:
+        f.append(f0+f1)
+        f0,f1 = f1,f1+f0
+    return f
+    
+a,b = map(int,input().split())
+kq = fibo(b)
+i = 0 
+while kq[i] < a:
+    i += 1 
+kq = kq[i:]
+print(*kq)
+print(len(kq))
