@@ -1,0 +1,10 @@
+import math
+a,b,c = map(int,input().split())
+cos_goc = (b**2 + c**2 - a**2)/(2*b*c)
+cos_goc = max(-1,min(1,cos_goc))
+goc = math.acos(cos_goc)
+goc = int(math.degrees(goc))
+sin_goc = math.sin(goc)
+S = (1/2)*(b*c)*math.sin(goc)
+print(goc)
+print(sin_goc)
