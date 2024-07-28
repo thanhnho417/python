@@ -11,3 +11,14 @@ for i in range(1,n+1):
             c += 1
 
 print(c)
+
+def luythua69(a,n):
+    if n == 0: return 1
+    t = luythua69(a,n//2)
+    t = t*t
+    if t%2 != 0:
+        t = t*a
+    return t
+
+n = int(input())
+print(luythua69(2,n))
